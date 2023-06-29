@@ -28,6 +28,10 @@
 	  start 0))
   (number-sequence start (1- end) step))
 
+  (defsubst square (x)
+  "Return the square of X."
+  (* x x))
+
 ;***********************  FILE FUNCTIONS  ***********************
 
 (defun load-data (file) 
