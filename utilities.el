@@ -32,6 +32,13 @@
   "Return the square of X."
   (* x x))
 
+(defun nshuffle (sequence)
+  "An implementation of the Knuth shuffle."
+  (cl-loop for i from (length sequence) downto 2
+	   do (cl-rotatef (elt sequence (random i))
+			  (elt sequence (1- i))))
+  sequence)
+
 ;***********************  FILE FUNCTIONS  ***********************
 
 (defun load-data (file) 
